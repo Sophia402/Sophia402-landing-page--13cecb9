@@ -1,7 +1,7 @@
 
 /* Toggle between adding and removing the "responsive" class to topnav when the user clicks on the icon */
 function myFunction(onclick) {
-    var x = document.getElementById("navbar_list");
+    let x = document.getElementById("navbar_list");
     if (x.className === "navbar_list") {
       x.className += " responsive";
     } else {
@@ -18,6 +18,12 @@ ToggleBtnId.addEventListener("click", () => {
 // ==== HIDE MENU ==== //
 CloseBtnId.addEventListener("click", (onclick) => {
  navId.classList.remove("show");
+});
+function setActive(i) {
+  $('#'+i).addClass("active");
+}
+$(document).ready(function(){
+    setActive("section 1+");
 });
   /**
  * 
